@@ -1,0 +1,363 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "MessinaSans";
+    src: url("/assets/fonts/MessinaSansWeb-Regular.woff2") format("woff2"),
+         url("/assets/fonts/MessinaSansWeb-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "MessinaSans";
+    src: url("/assets/fonts/MessinaSansWeb-SemiBold.woff2") format("woff2"),
+         url("/assets/fonts/MessinaSansWeb-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+/* after */
+body {
+    font-family: "MessinaSans", system-ui, -apple-system, "Segoe UI",
+                 Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.45;           /* Messina reads nicely a touch looser */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-top: 3.5rem;
+}
+
+
+
+.navbar {
+    opacity: 0.95;
+}
+
+/* override Bootstrap text-muted to cool gray */
+.text-muted {
+    color: #6b7280 !important;
+}
+
+/* set the font size for author and vanue */
+.pubinfo {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.author {
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+
+.pubmeta {
+    font-size: 0.95rem;
+    color: #9ca3af;
+}
+
+.inline-badge {
+    height: 16px;
+    vertical-align: -10%;
+    margin-right: 2px;
+    line-break: unset;
+}
+
+.no-break {
+    white-space: nowrap;
+}
+
+.cover-image {
+    width: 180px;
+    max-height: 120px;
+}
+
+.abstract-body {
+    min-height: 100px;
+}
+
+img.lazy {
+    background-image: url('images/loading.gif');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 50px 50px;
+    min-height: 80px;
+}
+
+video.lazy {
+    background-position: 50% 50%;
+    background-size: 50px 50px;
+    min-height: 80px;
+}
+
+
+.comma:not(:first-child) {
+    margin-left: -.3em;  
+}
+  
+/* no need to display empty elements */
+.comma:empty {
+    display: none;
+}
+
+.comma:not(:first-child):before {
+    content: ", ";
+}
+
+.badge-custom {
+    font-size: 100%;
+}
+
+@media (min-width: 576px) {
+    .card-columns {
+        column-count: 1!important;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-columns {
+        column-count: 2!important;
+    }
+}
+
+
+.bgh {
+  background-color:  #ffffd0;
+}
+
+.venue {
+  /* color:#2575fc; */
+  font-style: italic;
+  color:#000101;
+  font-weight: bold;
+}
+
+
+.classify {
+  color:  #d43f6c;
+  font-weight: bold;
+  font-size: large;
+}
+
+
+.one {
+  width: w-100;
+  /*height: 160px;*/
+  position: relative;
+}
+
+.two {
+  width: w-100;
+  /*height: 160px;*/
+  position: absolute;
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+.fade {
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+.text-note {
+  color: #9ca3af;
+}
+
+a {
+    text-decoration: none;
+    color: #d07616;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a.gradient-link {
+    text-decoration: none;
+    /* font-size: 20px; */
+    /* background: linear-gradient(90deg, #ed0808,#ff7e5f, #0841ed,#08ed54); */
+    background: linear-gradient(90deg, #0841ed 10%,#9908ed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+a.gradient-link:hover {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+a.icon-link {
+    text-decoration: none;
+    color: #6b7280;
+}
+
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem; /* spacing between buttons */
+  }
+  
+  .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: "MessinaSans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #111;
+    text-decoration: none;
+    border: 1px solid #d0d0d0;
+    border-radius: 0.4rem;
+    padding: 0.35rem 0.9rem;
+    transition: all 0.2s ease;
+    background-color: transparent;
+  }
+  
+  /* hover effect */
+  .contact-btn:hover {
+    border-color: #3b5fff;
+    color: #3b5fff;
+  }
+  
+  /* active state (blue outline) */
+  .contact-btn.active {
+    border-color: #0b3dd9;
+    color: #0b3dd9;
+  }
+  
+  /* icon sizing */
+  .contact-btn i {
+    font-size: 0.9rem;
+    line-height: 1;
+  }
+
+.soft {
+    /* border: 0; */
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    /* padding: 0; */
+    /* margin: 0; */
+  }
+  
+
+
+.blackiconcolor {color: #9ca3af;}
+.rediconcolor {color:#B55370;}
+
+.misctag {
+    font-size: 0.92rem;
+    color: #4b5563;
+    font-weight: 600;
+}
+
+.miscbody {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.text-bold {
+    font-weight: bold; /* Makes the text bold */
+}
+
+.apptag {
+    /* font-size: 0.85rem; */
+    color: #6b7280;
+    display: inline-block;
+    padding: 0.2em 0.7em;
+    /* font-weight: 600; */
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.apptag .apptag-link {
+    color: #9ca3af;
+    text-decoration: none;
+}
+
+
+
+
+.long-arrow {
+    display: inline-block;
+    font-size: 0.9em; /* Adjust size of the arrow */
+    letter-spacing: 0.3em; /* Add spacing to make the arrow look longer */
+    color: #6b7280;
+    vertical-align: middle; /* Align with text */
+}
+
+.news-date {
+    display: inline-block;
+    width: 5.5em;           /* 固定宽度可微调 */
+    font-weight: 500;
+    color: #4b5563;
+    text-align: left;      
+    /* margin-right: .6em; */
+    font-variant-numeric: tabular-nums;  /* 等宽数字 */
+  }
+
+  .section-title {
+    display: inline-block;          
+    border-bottom: 2px solid #191c1f;
+    /* padding-bottom: 0.2rem;         */
+    margin-bottom: 0.6rem;
+  }
+  
+
+  .light-navbar {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    position: static;
+    padding: 0.3rem 0 0.6rem;
+    margin-bottom: 2.5rem;
+    margin-top: 0;
+  }
+  
+  .light-container {
+    /* max-width: 900px; */
+    margin: 0 auto;
+    padding: 0 0rem;
+    display: flex;
+    justify-content: flex-end; /* 👈 align all links to the right */
+    align-items: center;
+  }
+  
+  /* Navigation links */
+  .light-links a {
+    /* font-family: "MessinaSans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; */
+    font-size: 0.95rem;
+    color: hsl(211, 25%, 25%);
+    text-decoration: none;
+    margin-left: 1.25rem;
+    transition: color 0.2s ease;
+  }
+  
+  .light-links a:hover {
+    color: hsl(211, 75%, 40%);
+  }
+  
+  /* Responsive: center on mobile */
+  @media (max-width: 600px) {
+    .light-container {
+      justify-content: center;
+    }
+    .light-links a {
+      margin-left: 0.8rem;
+      margin-right: 0.8rem;
+    }
+  }
+  
